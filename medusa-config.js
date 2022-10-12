@@ -69,9 +69,9 @@ module.exports = {
 		// redis_url: REDIS_URL,
 		// For more production-like environment install PostgresQL
 		// database_url: DATABASE_URL,
-		// database_type: "postgres",
-		database_url: DATABASE_URL,
 		database_type: "postgres",
+		database_url: 'postgres://ghazali_user:9fAkcWXFxOn1WkDRh3hGdjqqEDaR4US1@dpg-cd2o5v2en0hgnc9g282g-a.oregon-postgres.render.com/ghazali',
+		// database_type: "postgres",
 		// store_cors: STORE_CORS,
 		// admin_cors: ADMIN_CORS,
 	},
