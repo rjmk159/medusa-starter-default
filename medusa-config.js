@@ -43,6 +43,16 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
+  {
+		resolve: `medusa-file-s3`,
+		options: {
+			s3_url: "https://ghazalibucket.s3.us-east-1.amazonaws.com",
+			bucket: "ghazalibucket",
+			region: "us-east-1",
+			access_key_id: "AKIA2MR44HAAAVAWPRUE",
+			secret_access_key: "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",
+		},
+	},
   // Uncomment to add Stripe support.
   // You can create a Stripe account via: https://stripe.com
   // {
@@ -62,8 +72,8 @@ module.exports = {
     // database_type: "postgres",
     database_database: "./medusa-db.sql",
     database_type: "sqlite",
-    // store_cors: STORE_CORS,
-    // admin_cors: ADMIN_CORS,
+    store_cors: STORE_CORS,
+    admin_cors: ADMIN_CORS,
   },
   plugins,
 };
